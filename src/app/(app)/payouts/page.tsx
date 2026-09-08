@@ -1,12 +1,14 @@
 import { PageHeader } from "@/components/shell/page-header";
+import { PayoutsView } from "@/components/payouts/payouts-view";
+import { campaigns } from "@/data/campaigns";
+import { derivePayouts } from "@/lib/payouts";
 
 export default function PayoutsPage() {
+  const payouts = derivePayouts(campaigns);
   return (
     <div>
       <PageHeader title="Payouts" description="Creator payouts across every campaign." />
-      <div className="px-4 py-8 sm:px-6 lg:px-8">
-        <p className="text-sm text-muted-foreground">Coming next: payouts table.</p>
-      </div>
+      <PayoutsView payouts={payouts} />
     </div>
   );
 }

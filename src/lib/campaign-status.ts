@@ -1,4 +1,4 @@
-import type { CampaignStatus, CollaborationStatus } from "@/data/types";
+import type { CampaignStatus, CollaborationStatus, PayoutStatus } from "@/data/types";
 import { COLLABORATION_STATUSES } from "@/data/types";
 
 export const COLLABORATION_STATUS_LABEL: Record<CollaborationStatus, string> = {
@@ -29,6 +29,18 @@ export const CAMPAIGN_STATUS_TONE: Record<CampaignStatus, string> = {
   draft: "bg-muted text-muted-foreground",
   live: "bg-success/10 text-success",
   completed: "bg-brand/10 text-brand",
+};
+
+export const PAYOUT_STATUS_LABEL: Record<PayoutStatus, string> = {
+  scheduled: "Scheduled",
+  processing: "Processing",
+  paid: "Paid",
+};
+
+export const PAYOUT_STATUS_TONE: Record<PayoutStatus, string> = {
+  scheduled: "bg-violet-500/10 text-violet-600 dark:text-violet-400",
+  processing: "bg-amber-500/10 text-amber-600 dark:text-amber-400",
+  paid: "bg-success/10 text-success",
 };
 
 export function statusIndex(status: CollaborationStatus): number {
