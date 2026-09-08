@@ -44,8 +44,8 @@ export function AvatarInitials({
         className,
       )}
       style={{
-        backgroundColor: `oklch(0.92 0.05 ${hue})`,
-        color: `oklch(0.32 0.1 ${hue})`,
+        backgroundColor: `hsl(${hue} 55% 90%)`,
+        color: `hsl(${hue} 45% 30%)`,
       }}
     >
       {initialsFor(name)}
